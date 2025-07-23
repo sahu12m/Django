@@ -1,6 +1,6 @@
 name: Django Test Run
 
-on: [push]  # Run this workflow on every push
+on: [push]
 
 jobs:
   test_django:
@@ -13,7 +13,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.10
+          python-version: 3.10  # ✅ Use a valid version (not 3.1)
 
       - name: Install dependencies
         run: |
